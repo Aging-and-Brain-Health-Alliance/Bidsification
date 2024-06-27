@@ -1,0 +1,2 @@
+# Bidsification
+Scripts for bidsification
