@@ -55,14 +55,6 @@ MRI:
           ProtocolName: localizer
         bids: !!omap []
         json: !!omap []
-      - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_5_GF_Map_e1.nii.gz
-        checked: true
-        model: __unknown__
-        suffix: ''
-        attributes:
-          ProtocolName: GF_Map
-        bids: !!omap []
-        json: !!omap []
       - provenance: prepared/sub-C225/ses-01/MRI/001-AAHead_Scout/COV225_1_AAHead_Scout.nii.gz
         checked: true
         model: __unknown__
@@ -161,7 +153,7 @@ MRI:
           - MatrixCoilMode: <MatrixCoilMode>
           - CoilCombinationMethod: <CoilCombinationMethod>
           - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
-          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionAddress: "Univeristy Ave. 197, Newark, North East, US, 07102-1814"
           - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
               - Aging and Brain Health Alliance"
           - PulseSequenceType: Normal
@@ -238,6 +230,7 @@ MRI:
           - AcquisitionTime: <AcquisitionTIme>
           - PhaseEncodingDirection: <PhaseEncodingDirection>
           - TotalReadoutTime: 0.049590522
+          - B0FieldIndentifier: "bold_fmap"
     anat:
       - provenance: prepared/sub-A085/ses-01/MRI/002-MPRAGE GRAPPA2/AA_085_2_MPRAGE_GRAPPA2.nii.gz
         checked: true
@@ -386,6 +379,40 @@ MRI:
           - EffectiveEchoSpacing: 0.0000196294
           - TotalReadoutTime: 0.005005497
     fmap:
+      - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_5_GF_Map_e1.nii.gz
+        checked: true
+        suffix: 'magnitude1'
+        attributes:
+          ProtocolName: GF_Map
+          EchoNumber: 1
+        bids: !!omap []
+        json: !!omap
+          - B0FieldIndentifier: "bold_fmap"
+          - IntendedFor: <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
+      - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_6_GF_Map_e2.nii.gz
+        checked: true
+        suffix: 'magnitude2'
+        attributes:
+          ProtocolName: GF_Map
+          EchoNumber: 2
+          <ImageType/0>: "ORIGINAL"
+          <ImageType/1>: "PRIMARY"
+          <ImageType/2>: "M"
+          <ImageType/3>: "ND"
+          <ImageType/4>: "MAGNITUDE"
+        bids: !!omap []
+        json: !!omap
+          - B0FieldIndentifier: "bold_fmap"
+          - IntendedFor: <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
+      - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_6_GF_Map_e2.nii.gz
+        checked: true
+        suffix: 'phasediff'
+        attributes:
+          EchoTime2: 0.00765
+        bids: !!omap []
+        json: !!omap
+          - B0FieldIndentifier: "bold_fmap"
+          - IntendedFor: <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
       - provenance: prepared/sub-EX020/ses-4/MRI/013-Axial 3D ME T2 GRE/EX020_13_Axial_3D_ME_T2_GRE_e1.nii.gz
         checked: true
         model: fmap:TB1EPI
@@ -413,7 +440,6 @@ MRI:
           - Units: rad
           - PhaseEncodingDirection: <PhaseEncodingDirection>
           - ParallelAcquisitionTechnique: 'GRAPPA'
-          - IntendedFor: <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
       - provenance: prepared/sub-EX020/ses-4/MRI/014-Axial 3D ME T2 GRE/EX020_14_Axial_3D_ME_T2_GRE_e1_ph.nii.gz
         checked: true
         model: fmap:TB1EPI
@@ -441,7 +467,6 @@ MRI:
           - Units: 'rad'
           - PhaseEncodingDirection: <PhaseEncodingDirection>
           - ParallelAcquisitionTechnique: 'GRAPPA'
-          - IntendedFor: <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
       - provenance: prepared/sub-C225/ses-01/MRI/011-Axial 3D ME T2 GRE/COV225_11_Axial_3D_ME_T2_GRE_e1.nii.gz
         checked: true
         model: fmap:TB1EPI
@@ -469,8 +494,6 @@ MRI:
           - Units: 'rad'
           - PhaseEncodingDirection: <PhaseEncodingDirection>
           - ParallelAcquisitionTechnique: 'GRAPPA'
-          - IntendedFor:
-              - <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
       - provenance: prepared/sub-C225/ses-01/MRI/012-Axial 3D ME T2 GRE/COV225_12_Axial_3D_ME_T2_GRE_e1_ph.nii.gz
         checked: true
         model: fmap:TB1EPI
@@ -498,8 +521,6 @@ MRI:
           - Units: 'rad'
           - PhaseEncodingDirection: <PhaseEncodingDirection>
           - ParallelAcquisitionTechnique: 'GRAPPA'
-          - IntendedFor:
-              - <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
     dwi:
       - provenance: prepared/sub-C290/ses-01/MRI/010-AXMB_DTI_AP/COV290_10_AXMB_DTI_AP.nii.gz
         checked: true
