@@ -385,34 +385,32 @@ MRI:
         attributes:
           ProtocolName: GF_Map
           EchoNumber: 1
+          <ImageType/2>: "M"
         bids: !!omap []
         json: !!omap
           - B0FieldIndentifier: "bold_fmap"
-          - IntendedFor: <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
+          - IntendedFor: bids::<<subject>>/<<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
       - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_6_GF_Map_e2.nii.gz
         checked: true
         suffix: 'magnitude2'
         attributes:
           ProtocolName: GF_Map
           EchoNumber: 2
-          <ImageType/0>: "ORIGINAL"
-          <ImageType/1>: "PRIMARY"
           <ImageType/2>: "M"
-          <ImageType/3>: "ND"
-          <ImageType/4>: "MAGNITUDE"
         bids: !!omap []
         json: !!omap
           - B0FieldIndentifier: "bold_fmap"
-          - IntendedFor: <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
-      - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_6_GF_Map_e2.nii.gz
+          - IntendedFor: bids::<<subject>>/<<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
+      - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_7_GF_Map_e2_ph.nii.gz
         checked: true
         suffix: 'phasediff'
         attributes:
-          EchoTime2: 0.00765
+          ProtocolName: GF_Map
+          <ImageType/2>: "P"
         bids: !!omap []
         json: !!omap
           - B0FieldIndentifier: "bold_fmap"
-          - IntendedFor: <<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
+          - IntendedFor: bids::<<subject>>/<<session>>/func/<<subject>>_<<session>>_task-rest_part-mag_bold.nii.gz
       - provenance: prepared/sub-EX020/ses-4/MRI/013-Axial 3D ME T2 GRE/EX020_13_Axial_3D_ME_T2_GRE_e1.nii.gz
         checked: true
         model: fmap:TB1EPI

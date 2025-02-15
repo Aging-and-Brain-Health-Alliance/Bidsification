@@ -1,0 +1,226 @@
+__bids__: 1.10.0
+MRI:
+  jsonNIFTI:
+    __ignore__:
+      - provenance: prepared/sub-A085/ses-01/MRI/001-localizer/AA_085_1_localizer_i00001.nii.gz
+        checked: true
+        model: __unknown__
+        suffix: ''
+        attributes:
+          ProtocolName: localizer
+        bids: !!omap []
+        json: !!omap []
+      - provenance: prepared/sub-C225/ses-01/MRI/001-AAHead_Scout/COV225_1_AAHead_Scout.nii.gz
+        checked: true
+        model: __unknown__
+        suffix: ''
+        attributes:
+          ProtocolName: 'AAHead_Scout'
+        bids: !!omap []
+        json: !!omap []
+      - provenance: 
+          prepared/sub-A085/ses-01/MRI/005-Field_mapping/AA_085_5_Field_mapping_e2_ph.nii.gz
+        checked: true
+        model: __unknown__
+        suffix: ''
+        attributes:
+          ProtocolName: Field_mapping
+        bids: !!omap []
+        json: !!omap []
+      - provenance: prepared/sub-A085/ses-01/MRI/006-MB_Resting_SBRef/AA_085_6_MB_Resting.nii.gz
+        checked: true
+        model: __unknown__
+        suffix: ''
+        attributes:
+          ManufacturersModelName: TrioTim
+        bids: !!omap []
+        json: !!omap []
+    func:
+      - provenance: 
+          prepared/sub-EX004/ses-2/MRI/007-MB_fMRI_resting_state/EX004_7_MB_fMRI_resting_state.nii.gz
+        checked: true
+        model: func:bold
+        suffix: 'bold'
+        attributes:
+          ProtocolName: MB_fMRI_resting_state
+          <ImageType/2>: M
+        bids: !!omap
+          - task: rest
+        json: !!omap
+          - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
+          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
+          - TaskName: rest
+          - B0FieldIndentifier: "bold_fmap"
+    anat:
+      - provenance: prepared/sub-EX004/ses-2/MRI/005-MPRage/EX004_5_MPRage.nii.gz
+        checked: true
+        model: anat:T1w
+        suffix: 'T1w'
+        attributes:
+          ProtocolName: MPRage
+        bids: !!omap []
+        json: !!omap []
+      - provenance: prepared/sub-EX020/ses-4/MRI/008-Sagittal 3D FLAIR/EX020_8_Sagittal_3D_FLAIR.nii.gz
+        checked: true
+        model: anat:FLAIR
+        suffix: 'FLAIR'
+        attributes:
+          ProtocolName: Sagittal 3D FLAIR
+          ProtocolName: Sagittal_3D_FLAIR
+        bids: !!omap []
+        json: !!omap
+          - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
+          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
+      - provenance: prepared/sub-C225/ses-01/MRI/010-Sag_T2w_SPC/COV225_10_Sag_T2w_SPC.nii.gz
+        example: anat/sub-C225_ses-01_part-mag_T2w
+        checked: true
+        model: anat:T2w
+        suffix: 'T2w'
+        attributes:
+          ProtocolName: Sag_T2w_SPC
+        bids: !!omap []
+        json: !!omap
+          - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
+          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
+      - provenance: prepared/sub-EX020/ses-4/MRI/013-Axial 3D ME T2 GRE/EX020_13_Axial_3D_ME_T2_GRE_e1.nii.gz
+        checked: true
+        suffix: 'MEGRE'
+        attributes:
+          ProtocolName: 
+            - Axial 3D ME T2 GRE
+            - Axial_3D_ME_T2_GRE
+          <ImageType/2>: M
+        bids: !!omap
+          - echo: <EchoNumber>
+          - part: mag
+        json: !!omap
+          - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
+          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
+      - provenance: prepared/sub-EX020/ses-4/MRI/014-Axial 3D ME T2 GRE/EX020_14_Axial_3D_ME_T2_GRE_e1_ph.nii.gz
+        checked: true
+        suffix: 'MEGRE'
+        attributes:
+          ProtocolName: 
+            - Axial 3D ME T2 GRE
+            - Axial_3D_ME_T2_GRE
+          <ImageType/2>: P
+        bids: !!omap
+          - echo: <EchoNumber>
+          - part: phase
+        json: !!omap
+          - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
+          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
+    fmap:
+      - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_5_GF_Map_e1.nii.gz
+        checked: true
+        suffix: 'magnitude1'
+        attributes:
+          ProtocolName: GF_Map
+          EchoNumber: 1
+          <ImageType/2>: "M"
+        bids: !!omap []
+        json: !!omap
+          - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
+          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
+          - B0FieldIndentifier: "bold_fmap"
+          - IntendedFor: bids::<<subject>>/<<session>>/func/<<subject>>_<<session>>_task-rest_bold.nii.gz
+      - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_6_GF_Map_e2.nii.gz
+        checked: true
+        suffix: 'magnitude2'
+        attributes:
+          ProtocolName: GF_Map
+          EchoNumber: 2
+          <ImageType/2>: "M"
+        bids: !!omap []
+        json: !!omap
+          - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
+          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
+              - Aging and Brain Health Alliance"
+          - B0FieldIndentifier: "bold_fmap"
+          - IntendedFor: bids::<<subject>>/<<session>>/func/<<subject>>_<<session>>_task-rest_bold.nii.gz
+      - provenance: prepared/sub-EX005/ses-1/MRI/005-GF_Map/EX005_7_GF_Map_e2_ph.nii.gz
+        checked: true
+        suffix: 'phasediff'
+        attributes:
+          ProtocolName: GF_Map
+          <ImageType/2>: "P"
+        bids: !!omap []
+        json: !!omap
+          - B0FieldIndentifier: "bold_fmap"
+          - IntendedFor: bids::<<subject>>/<<session>>/func/<<subject>>_<<session>>_task-rest_bold.nii.gz
+    dwi:
+      - provenance: prepared/sub-C290/ses-01/MRI/010-AXMB_DTI_AP/COV290_10_AXMB_DTI_AP.nii.gz
+        checked: true
+        model: dwi:dwi
+        suffix: 'dwi'
+        attributes:
+          ProtocolName: AXMB_DTI_AP
+        bids: !!omap
+          - dir: AP
+        json: !!omap
+          - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
+          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
+              - Aging and Brain Health Alliance"
+      - provenance: prepared/sub-C290/ses-01/MRI/011-AXMB_DTI_PA/COV290_11_AXMB_DTI_PA.nii.gz
+        checked: true
+        model: dwi:dwi
+        suffix: 'dwi'
+        attributes:
+          ProtocolName: AXMB_DTI_PA
+        bids: !!omap
+          - dir: PA
+        json: !!omap
+          - InstitutionName: "Rutgers University Brain Imaging Center (RUBIC)"
+          - InstitutionAddress: "Univeristy Ave. 197,Newark,North East,US,07102-1814"
+          - InstitutionalDepartmentName: "Center for Molecular and Behavioral Neuroscience
+              - Aging and Brain Health Alliance"
+    perf:
+      - provenance:
+          prepared/sub-C290/ses-01/MRI/023-Axial_ASL_3D_3000/COV290_23_Axial_ASL_3D_3000.nii.gz
+        checked: true
+        suffix: 'asl'
+        attributes:
+          ProtocolName: 
+            - Axial_ASL_3D_3000
+            - Axial_ASL_3D_2510
+            - Axial_ASL_3D_2000
+            - Axial_ASL_3D_1500
+            - Axial_ASL_3D_1000
+            - Axial ASL 3D 3000
+            - Axial ASL 3D 2510
+            - Axial ASL 3D 2000
+            - Axial ASL 3D 1500
+            - Axial ASL 3D 1000
+          <ImageType/0>: ORIGINAL
+        bids: !!omap
+          - inv: <InversionTime>
+        json: !!omap []
+
+    derived:
+      - provenance:
+          prepared/sub-C290/ses-01/MRI/023-Axial_ASL_3D_3000/COV290_23_Axial_ASL_3D_3000.nii.gz
+        checked: true
+        suffix: 'asl'
+        attributes:
+          ProtocolName: 
+            - Axial_ASL_3D_3000
+            - Axial_ASL_3D_2510
+            - Axial_ASL_3D_2000
+            - Axial_ASL_3D_1500
+            - Axial_ASL_3D_1000
+            - Axial ASL 3D 3000
+            - Axial ASL 3D 2510
+            - Axial ASL 3D 2000
+            - Axial ASL 3D 1500
+            - Axial ASL 3D 1000
+          <ImageType/0>: DERIVED
+        bids: !!omap []
+        json: !!omap []
