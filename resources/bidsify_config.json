@@ -1,0 +1,7 @@
+{
+    "DICOM_DATA_PATH": "/home/jlmojicaperez/bidsification/full_data/Bidsification/data/extracted",
+    "DATASET_LOCATION": "/home/jlmojicaperez/bidsification/full_data/Bidsification",
+    "DATASET_NAME": "prisma_dcm2bids",
+    "DCM2BIDS_CONFIG_FILE_PATH": "/home/jlmojicaperez/bidsification/full_data/Bidsification/resources/prisma_config.json",
+    "PARALLEL_PROCESSES": "min"
+}

@@ -1,0 +1,361 @@
+{
+    "descriptions": [
+        {
+            "id": "bold_rest",
+            "datatype": "func",
+            "suffix": "bold",
+            "criteria": {
+                "ProtocolName": "MB?fMRI?resting?state"
+            },
+            "custom_entities": "task-rest",
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "TaskName": "rest",
+                "B0FieldIndentifier": "bold_fmap"
+            }
+        },
+        {
+            "datatype": "anat",
+            "suffix": "T1w",
+            "criteria": {
+                "ProtocolName": "MPRage"
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance"
+            }
+        },
+        {
+            "datatype": "anat",
+            "suffix": "FLAIR",
+            "criteria": {
+                "ProtocolName":"Sagittal?3D?FLAIR"
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance"
+            }
+        },
+        {
+            "datatype": "anat",
+            "suffix": "T2w",
+            "criteria": {
+                "ProtocolName": "Sag?T2w?SPC"
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance"
+            }
+        },
+        {
+            "datatype": "anat",
+            "suffix": "MEGRE",
+            "custom_entities": "part-mag",
+            "criteria": {
+                "ProtocolName": "Axial?3D?ME?T2?GRE",
+                "ImageType": ["ORIGINAL", "PRIMARY", "M", "NORM", "DIS3D", "DIS2D", "MAGNITUDE"]
+
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance"
+            }
+        },
+        {
+            "datatype": "anat",
+            "suffix": "MEGRE",
+            "custom_entities": "part-phase",
+            "criteria": {
+                "ProtocolName": "Axial?3D?ME?T2?GRE",
+                "ImageType": ["ORIGINAL", "PRIMARY", "P", "DIS3D", "DIS2D", "PHASE"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "Units": "arbitrary"
+            }
+        },
+        {
+            "datatype": "fmap",
+            "suffix": "magnitude1",
+            "criteria": {
+                "ProtocolName": "GF?Map",
+                "EchoNumber": 1,
+                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "MAGNITUDE"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "IntendedFor": "bold_rest"
+            }
+        },
+        {
+            "datatype": "fmap",
+            "suffix": "magnitude2",
+            "criteria": {
+                "ProtocolName": "GF?Map",
+                "EchoNumber": 2,
+                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "MAGNITUDE"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "IntendedFor": "bold_rest"
+            }
+        },
+        {
+            "datatype": "fmap",
+            "suffix": "phasediff",
+            "criteria": {
+                "ProtocolName": "GF?Map",
+                "ImageType": ["ORIGINAL", "PRIMARY", "P", "ND", "PHASE"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "IntendedFor": "bold_rest"
+            }
+        },
+        {
+            "datatype": "dwi",
+            "suffix": "dwi",
+            "custom_entities": "dir-AP",
+            "criteria": {
+                "ProtocolName": "AXMB?DTI?AP"
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance"
+            }
+        },
+        {
+            "datatype": "dwi",
+            "suffix": "dwi",
+            "custom_entities": "dir-PA",
+            "criteria": {
+                "ProtocolName": "AXMB?DTI?PA"
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance"
+            }
+        },
+        {
+            "datatype": "perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime1000",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?1000",
+	            "ImageType": ["ORIGINAL", "PRIMARY", "ASL", "NONE", "NORM", "DIS2D", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 1,
+                "M0Type": "Absent",
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        },
+        {
+            "datatype": "perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime1500",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?1500",
+	            "ImageType": ["ORIGINAL", "PRIMARY", "ASL", "NONE", "NORM", "DIS2D", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 1.5,
+                "M0Type": "Absent",
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        },
+        {
+            "datatype": "perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime2000",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?2000",
+	            "ImageType": ["ORIGINAL", "PRIMARY", "ASL", "NONE", "NORM", "DIS2D", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 2,
+                "M0Type": "Absent",
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        },
+        {
+            "datatype": "perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime2510",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?2510",
+	            "ImageType": ["ORIGINAL", "PRIMARY", "ASL", "NONE", "NORM", "DIS2D", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 2.51,
+                "M0Type": "Absent",
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        },
+        {
+            "datatype": "perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime3000",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?3000",
+	            "ImageType": ["ORIGINAL", "PRIMARY", "ASL", "NONE", "NORM", "DIS2D", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 3,
+                "M0Type": "Absent",
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        },
+        {
+            "datatype": "derivatives/asl-m0/perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime1000m0",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?1000",
+	            "ImageType": ["DERIVED", "PRIMARY", "ASL", "NORM", "DIS2D", "SUB", "TTEST", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 1,
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        },
+        {
+            "datatype": "derivatives/asl-m0/perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime1500m0",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?1500",
+	            "ImageType": ["DERIVED", "PRIMARY", "ASL", "NORM", "DIS2D", "SUB", "TTEST", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 1.5,
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        },
+        {
+            "datatype": "derivatives/asl-m0/perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime2000m0",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?2000",
+	            "ImageType": ["DERIVED", "PRIMARY", "ASL", "NORM", "DIS2D", "SUB", "TTEST", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 2,
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        },
+        {
+            "datatype": "derivatives/asl-m0/perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime2510m0",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?2510",
+	            "ImageType": ["DERIVED", "PRIMARY", "ASL", "NORM", "DIS2D", "SUB", "TTEST", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 2.51,
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        },
+        {
+            "datatype": "derivatives/asl-m0/perf",
+            "suffix": "asl",
+            "custom_entities": "acq-invtime3000m0",
+            "criteria": {
+                "ProtocolName": "Axial?ASL?3D?3000",
+	            "ImageType": ["DERIVED", "PRIMARY", "ASL", "NORM", "DIS2D", "SUB", "TTEST", "MOSAIC"]
+            },
+            "sidecar_changes": {
+                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
+                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
+                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
+                "BolusCutOffFlag": true,
+                "BolusCutOffTechnique": "QUIPSSII",
+                "BolusCutOffDelayTime": 0.8,
+                "PostLabelingDelay": 3,
+                "BackgroundSuppression": true,
+                "TotalAcquiredPairs": 2
+            }
+        }
+    ]
+}

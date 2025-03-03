@@ -175,3 +175,7 @@ cython_debug/
 
 # data
 data/
+
+prisma_dcm2bids/
+
+GluckLab/
