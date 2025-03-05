@@ -64,7 +64,6 @@ def move_aslm0(dataset_location: str, dataset_name: str, parallel_processes: int
     dataset_path = os.path.join(dataset_location, dataset_name)
     subjects = [dir for dir in os.listdir(dataset_path) if dir.startswith("sub-")]
     subject_source_paths = []
-    derivatives_paths = []               
     aslm0_dest_paths = []
     for subject in subjects:
         sessions = [session for session in os.listdir(os.path.join(dataset_path, subject)) if session.startswith("ses-")]
@@ -73,16 +72,15 @@ def move_aslm0(dataset_location: str, dataset_name: str, parallel_processes: int
             aslm0_perf_path = os.path.join(derivatives_path, "asl-m0", "perf")
             if os.path.isdir(aslm0_perf_path):
                 subject_source_paths.append(aslm0_perf_path)
-                aslm0_dest_paths.append(os.path.join(dataset_path, "derivatives", "asl-m0", subject, session, "perf"))
-                derivatives_paths.append(derivatives_path)
+                aslm0_dest_paths.append(os.path.join(dataset_path, "derivatives", "asl-m0", subject, session))
 
     source_dest_pairs = [(source, dest) for source, dest in zip(subject_source_paths, aslm0_dest_paths)]
+    aslm0_source_paths = [os.path.join(*(["/"] + path.split("/")[:-2])) for path in subject_source_paths]
 
     with Pool(parallel_processes) as p:
         p.map(os.makedirs, aslm0_dest_paths)
         p.starmap(shutil.move, source_dest_pairs)
-        p.map(os.removedirs, [os.path.join(directory_path.split("/")[-1]) for directory_path in derivatives_paths])
-        p.map(os.removedirs, derivatives_paths)
+        #p.map(shutil.rmtree, aslm0_source_paths)
 
 def main():
 
