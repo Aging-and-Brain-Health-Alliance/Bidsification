@@ -3,6 +3,7 @@ import os
 import shutil
 import sys
 import json
+import csv
 from multiprocessing import Pool
 from GluckLab.utils import subjectid_to_seqid as s2s
 
@@ -80,7 +81,31 @@ def move_aslm0(dataset_location: str, dataset_name: str, parallel_processes: int
     with Pool(parallel_processes) as p:
         p.map(os.makedirs, aslm0_dest_paths)
         p.starmap(shutil.move, source_dest_pairs)
-        #p.map(shutil.rmtree, aslm0_source_paths)
+        p.map(shutil.rmtree, aslm0_source_paths)
+
+def write_aslcontext(aslcontext_filepath):
+    with open(aslcontext_filepath, "w", newline="") as aslcontext_file:
+        fieldnames = ["volume_type"]
+        rows = [{"volume_type": "control"}, {"volume_type": "label"}] * 2
+        writer = csv.DictWriter(aslcontext_file, delimiter="\t", quotechar="\"", quoting=csv.QUOTE_MINIMAL, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+def add_aslcontext(dataset_location: str, dataset_name: str, parallel_processes: int):
+    dataset_path = os.path.join(dataset_location, dataset_name)
+    subjects = [dir for dir in os.listdir(dataset_path) if dir.startswith("sub-")]
+    aslcontext_filepaths = []
+    for subject in subjects:
+        subject_path = os.path.join(dataset_path, subject)
+        sessions = [session for session in os.listdir(subject_path) if session.startswith("ses-")]
+        for session in sessions:
+            session_path = os.path.join(subject_path, session)
+            if "perf" in os.listdir(session_path):
+                perf_path = os.path.join(session_path, "perf")
+                for asl_file in os.listdir(perf_path):
+                    if asl_file.endswith("asl.nii.gz"):
+                        aslcontext_filepaths.append(os.path.join(perf_path, asl_file.replace("asl.nii.gz", "aslcontext.tsv")))
+    with Pool(parallel_processes) as p:
+        p.map(write_aslcontext, aslcontext_filepaths)
 
 def main():
 
@@ -145,6 +170,10 @@ def main():
     print("Moving asl-m0 derivatives...")
     move_aslm0(dataset_location, dataset_name, PARALLEL_PROCESSES)
     print("Asl-m0 move complete")
+
+    print("Adding aslcontext.tsv files...") 
+    add_aslcontext(dataset_location, dataset_name, PARALLEL_PROCESSES)
+    print("aslcontext.tsv files added") 
 
     print("Done.")
 
