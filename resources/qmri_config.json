@@ -1,7 +1,7 @@
 {
     "descriptions": [
         {
-            "id": "bold_rest",
+            "id": "id_task-rest",
             "datatype": "func",
             "suffix": "bold",
             "criteria": {
@@ -129,19 +129,6 @@
         },
         {
             "datatype": "anat",
-            "suffix": "UNIT1",
-            "criteria": {
-                "ProtocolName": "mp2rage_1.0iso_acc4.6x",
-                "ImageType": ["DERIVED", "PRIMARY", "M", "UNI", "DIS3D", "DIS2D", "MAGNITUDE"]
-            },
-            "sidecar_changes": {
-                "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
-                "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
-                "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance"
-            }
-        },
-        {
-            "datatype": "anat",
             "suffix": "MP2RAGE",
             "custom_entities": "acq-UNI",
             "criteria": {
@@ -172,7 +159,14 @@
             "custom_entities": ["acq-PDw", "part-mag"],
             "criteria": {
                 "ProtocolName": "dzne_ep3d_PDw",
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "COMBINED", "MOSAIC", "MAGNITUDE"]
+                "ImageType": {"any": [
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "00", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "01", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "02", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "03", "COMBINED", "MOSAIC", "MAGNITUDE"]
+                    ]
+                }
             },
             "sidecar_changes": {
                 "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
@@ -186,7 +180,14 @@
             "custom_entities": ["acq-PDw", "part-phase"],
             "criteria": {
                 "ProtocolName": "dzne_ep3d_PDw",
-                "ImageType": ["ORIGINAL", "PRIMARY", "P", "ND", "COMBINED", "MOSAIC", "PHASE"]
+                "ImageType": {"any": [
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "00", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "01", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "02", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "03", "COMBINED", "MOSAIC", "PHASE"]
+                    ]
+                }
             },
             "sidecar_changes": {
                 "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
@@ -200,7 +201,14 @@
             "custom_entities": ["acq-T1w", "part-mag"],
             "criteria": {
                 "ProtocolName": "dzne_ep3d_T1w",
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "COMBINED", "MOSAIC", "MAGNITUDE"]
+                "ImageType": {"any": [
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "00", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "01", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "02", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "03", "COMBINED", "MOSAIC", "MAGNITUDE"]
+                    ]
+                }
             },
             "sidecar_changes": {
                 "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
@@ -214,7 +222,14 @@
             "custom_entities": ["acq-T1w", "part-phase"],
             "criteria": {
                 "ProtocolName": "dzne_ep3d_T1w",
-                "ImageType": ["ORIGINAL", "PRIMARY", "P", "ND", "COMBINED", "MOSAIC", "PHASE"]
+                "ImageType": {"any": [
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "00", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "01", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "02", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "03", "COMBINED", "MOSAIC", "PHASE"]
+                    ]
+                }
             },
             "sidecar_changes": {
                 "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
@@ -228,7 +243,14 @@
             "custom_entities": ["acq-MTw", "part-mag"],
             "criteria": {
                 "ProtocolName": "dzne_ep3d_MTw",
-                "ImageType": ["ORIGINAL", "PRIMARY", "M", "ND", "COMBINED", "MOSAIC", "MAGNITUDE"]
+                "ImageType": {"any": [
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "00", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "01", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "02", "COMBINED", "MOSAIC", "MAGNITUDE"],
+                        ["ORIGINAL", "PRIMARY", "M", "ND", "ECHO", "03", "COMBINED", "MOSAIC", "MAGNITUDE"]
+                    ]
+                }
             },
             "sidecar_changes": {
                 "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
@@ -242,7 +264,14 @@
             "custom_entities": ["acq-MTw", "part-phase"],
             "criteria": {
                 "ProtocolName": "dzne_ep3d_MTw",
-                "ImageType": ["ORIGINAL", "PRIMARY", "P", "ND", "COMBINED", "MOSAIC", "PHASE"]
+                "ImageType": {"any": [
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "01", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "02", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "03", "COMBINED", "MOSAIC", "PHASE"],
+                        ["ORIGINAL", "PRIMARY", "P", "ND", "ECHO", "04", "COMBINED", "MOSAIC", "PHASE"]
+                    ]
+                }
             },
             "sidecar_changes": {
                 "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
@@ -343,7 +372,7 @@
                 "InstitutionName": "Rutgers University Brain Imaging Center (RUBIC)",
                 "InstitutionAddress": "Univeristy Ave. 197,Newark,North East,US,07102-1814",
                 "InstitutionalDepartmentName": "Center for Molecular and Behavioral Neuroscience- Aging and Brain Health Alliance",
-                "IntendedFor": "bold_rest"
+                "IntendedFor": "id_task-rest"
             }
         },
         {
