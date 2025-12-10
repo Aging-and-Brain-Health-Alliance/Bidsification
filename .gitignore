@@ -173,5 +173,12 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# constants
+constants.py
+
 # data
 data/
+
+*dcm2bids/
+
+GluckLab/

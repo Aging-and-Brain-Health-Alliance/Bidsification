@@ -1,0 +1,7 @@
+{
+    "DICOM_DATA_PATH": "/home/jlmojicaperez/glucklab/data_inquiries/soodeh_bids_aug-25-2025/data/qmri/extracted",
+    "DATASET_LOCATION": "/home/jlmojicaperez/glucklab/data_inquiries/soodeh_bids_aug-25-2025/data/qmri/",
+    "DATASET_NAME": "qMRI_dcm2bids",
+    "DCM2BIDS_CONFIG_FILE_PATH": "/home/jlmojicaperez/glucklab/mri/Bidsification/resources/qmri_config.json",
+    "PARALLEL_PROCESSES": "min"
+}
