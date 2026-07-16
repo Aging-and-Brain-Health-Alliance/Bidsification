@@ -16,7 +16,7 @@ def get_seqids_and_sessions(subjectids: list[str]):
     sessions = []
     for subjectid in subjectids:
         seqids.append(subjectid[:5])
-        session = "01" if "_" not in subjectid.replace("_DICOM", "") else "02"
+        session = "01" if "_" in subjectid.replace("_DICOM", "") else "02"
         sessions.append(session)
     return seqids, sessions
 
