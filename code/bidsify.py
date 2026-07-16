@@ -19,7 +19,7 @@ def get_seqids_and_sessions(subjectids: list[str]):
         seqids.append(s2s.get_seqid(subjectid))
 
         session = s2s.get_instance_number(subjectid)
-        session_str = f"0{session}" if session < 10 else str(session)
+        session_str = f"{session:02}" if session is not None else None
         sessions.append(session_str)
     return seqids, sessions
 
@@ -192,8 +192,8 @@ def main():
     print("Scaffolding generated.")
 
     print("Copying source data to dataset location...")
-    copy_data_to_dataset_location(
-        dicom_data_path, dataset_location, dataset_name, PARALLEL_PROCESSES)
+    # copy_data_to_dataset_location(
+    #     dicom_data_path, dataset_location, dataset_name, PARALLEL_PROCESSES)
     print("Copying complete.")
 
     print("Translating SubjectIDs to SeqIDs and Sessions")
